@@ -12,20 +12,26 @@
 </head>
 
 <body>
+    <!-- Title & search part -->
     <header class="container my-4">
         <h1 class="text-center mb-3">Welcome To <span class="text-danger">Book Shop</span></h1>
         <div class="input-group mb-3 w-50 mx-auto">
-            <input id="search-field" type="text" class="form-control" placeholder="Search by book name (ex. javascript)"
-                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input id="search-field" type="text" class="form-control"
+                placeholder="Search by book name or author name (ex. javascript)" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
             <button onclick="searchButton()" class="btn btn-outline-secondary" type="button"
                 id="button-search">Search</button>
         </div>
     </header>
     <main class="container">
         <section>
+            <!-- Empty string error handle -->
             <div id="error"></div>
+            <!-- Not found error handle -->
             <div id="error-message"></div>
+            <!-- Total result count-->
             <div id='count'></div>
+            <!-- Display search result -->
             <div class="row row-cols-1 row-cols-md-3 g-4 pt-2 pb-5" id='card'></div>
         </section>
     </main>
